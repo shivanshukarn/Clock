@@ -34,7 +34,10 @@ function getTime(){
     const month = time.getMonth();
     const day = time.getDay();
     const datee = time.getDate();
-    const hours = time.getHours();
+    let hours = time.getHours();
+    if(hours === 0){
+      hours = 12
+    }
     
     const hoursForClock = hours >= 13 ? hours % 12 : hours;
     const minutes = time.getMinutes()
